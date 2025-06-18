@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills & Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #00ffd5;
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li {
+      background: #1f1f1f;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-align: center;
+      color: #00ffd5;
+      font-weight: bold;
+      box-shadow: 0 0 8px rgba(0, 255, 213, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .skills li:hover {
+      transform: translateY(-4px);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #333;
+      box-shadow: 0 0 10px rgba(0, 255, 213, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 15px rgba(0, 255, 213, 0.2);
+    }
+
+    .project-card h3 {
+      color: #00ffd5;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .project-card p {
+      color: #ccc;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>My Portfolio</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills & Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Technical Skills</h2>
+      <ul class="skills">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>ReactJS</li>
+        <li>Core Java</li>
+        <li>MySQL</li>
+        <li>GitHub</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>My Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Credit Card Fraud Detection</h3>
+          <p>Detects fraudulent transactions in real time using the XGBoost algorithm and a secure 3-step verification system including OTP and behavioral checks.</p>
+          <p><strong>Tech:</strong> Python, XGBoost, Scikit-learn</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Malware Detection System</h3>
+          <p>Identifies malware in URLs and files using Random Forest. Designed as a lightweight solution for web and email systems.</p>
+          <p><strong>Tech:</strong> Python, Flask, Random Forest</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
