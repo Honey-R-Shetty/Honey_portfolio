@@ -1,43 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Honey Shetty | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <h1>My Portfolio</h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="skills.html">Skills & Projects</a></li>
-           <li><a href="education.html">Education</a></li>
-          <li><a href="contact.html">Contact</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honey Shetty | Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #f1f1f1;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .bg-custom {
+      background-color: #1a1a1a;
+    }
+
+    .text-custom {
+      color: #00ffd5;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .card-custom {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 255, 213, 0.05);
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      height: 400px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #aaa;
+      border-top: 1px solid #333;
+      font-size: 0.9em;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .btn-outline-info {
+      min-width: 150px;
+    }
+
+    .navbar-nav .nav-link {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    @media (min-width: 992px) {
+      .navbar-nav {
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+  <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-custom border-bottom border-secondary fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand text-custom" href="#home">Honey's Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </div>
+  </nav>
+  <!-- Home Section -->
+  <section id="home" class="text-center section pt-5 mt-5">
+    <div class="container py-5">
+      <h2>Hello, I'm <span class="text-custom">Honey Shetty</span></h2>
+      <p class="mt-3">A self-motivated learner with a love for turning ideas into interactive web experiences.</p>
+      <p>I enjoy exploring how technology works, especially in web development and Java programming.</p>
+      <p>With each line of code, I aim to grow, improve, and build something meaningful.</p>
+    </div>
+  </section>
 
-    <main class="home">
-      <section>
-        <h2>Hello, I'm <span>Honey Shetty</span></h2>
-        <p>
-          A self-motivated learner with a love for turning ideas into
-          interactive web experiences.
-        </p>
-        <p>
-          I enjoy exploring how technology works, especially in web development
-          and Java programming.
-        </p>
-        <p>
-          With each line of code, I aim to grow, improve, and build something
-          meaningful.
-        </p>
+  <!-- Skills Section -->
+  <section id="skills" class="section text-center">
+    <div class="container">
+      <h2 class="text-custom">Technical Skills</h2>
+      <div class="row mt-4 g-4">
+        <div class="col-md-6">
+          <label class="form-label text-white">HTML5</label>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 90%">90%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label text-white">ReactJS</label>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 75%">75%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label text-white">JavaScript</label>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 85%">85%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label text-white">Core Java</label>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 80%">80%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label text-white">MySQL</label>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 70%">70%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-       
-      </section>
-    </main>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="text-custom text-center">My Projects</h2>
+      <div class="row mt-4 g-4">
+        <div class="col-md-6">
+          <div class="card-custom h-100">
+            <h3 class="text-custom">Credit Card Fraud Detection</h3>
+            <p>Detects fraudulent transactions using XGBoost with 3-step verification (OTP, fingerprint, behavior analysis).</p>
+            <p><strong>Tech:</strong> Python, XGBoost, Scikit-learn</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-custom h-100">
+            <h3 class="text-custom">Malware Detection System</h3>
+            <p>Identifies malware in URLs and files using Random Forest. Lightweight for web/email systems.</p>
+            <p><strong>Tech:</strong> Python, Flask, Random Forest</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </body>
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="text-custom text-center">My Education</h2>
+      <div class="accordion mt-4" id="educationAccordion">
+        <div class="accordion-item bg-custom text-white border-secondary">
+          <h2 class="accordion-header" id="edu1">
+            <button class="accordion-button bg-custom text-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+              East West College of Engineering
+            </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#educationAccordion">
+            <div class="accordion-body">
+              Bachelor of Engineering<br><strong>CGPA:</strong> 9.0
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-custom text-white border-secondary">
+          <h2 class="accordion-header" id="edu2">
+            <button class="accordion-button collapsed bg-custom text-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+              R N Shetty PU College, Kundapur
+            </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+            <div class="accordion-body">
+              Pre-University (PU) - PCMCs<br><strong>Percentage:</strong> 93%
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-custom text-white border-secondary">
+          <h2 class="accordion-header" id="edu3">
+            <button class="accordion-button collapsed bg-custom text-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+              Little Star High School, Yadadi Mathyadi
+            </button>
+          </h2>
+          <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+            <div class="accordion-body">
+              SSLC (10th Standard)<br><strong>Percentage:</strong> 90%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section text-center">
+    <div class="container">
+      <h2 class="text-custom">Get in Touch</h2>
+      <p class="text-white">I'd love to connect! Whether you're a recruiter, fellow developer, or just want to say hi:</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+        <a href="https://www.linkedin.com/in/honey-shetty-652975316" target="_blank" class="btn btn-outline-info d-flex align-items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="20" height="20"> LinkedIn
+        </a>
+        <a href="https://github.com/Honey-R-Shetty" target="_blank" class="btn btn-outline-info d-flex align-items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" width="20" height="20"> GitHub
+        </a>
+        <a href="mailto:your.email@example.com" class="btn btn-outline-info d-flex align-items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email" width="20" height="20"> Email Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+  <a href="#home" class="btn btn-info back-to-top">↑</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
